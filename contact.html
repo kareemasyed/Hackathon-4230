@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>
+            Contact Us 
+        </title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head> 
+    <style>
+        body  div {
+            text-align:right;
+        }    
+                header{
+                  background-color: rgb(219, 218, 217);
+                }
+                .custom-spacing {
+            margin-right: 10px; 
+        }
+</style>
+        <header>
+        <div class="container">
+          <br>
+          <a href="home.html"><button type="button" class="btn btn-info custom-spacing">HOME</button></a>
+          <a href="about.html">  <button type="button" class="btn btn-info custom-spacing">ABOUT US</button></a>
+          <a href="services.html"> <button type="button" class="btn btn-info custom-spacing">SERVICES</button></a>
+          <a href="contact.html"> <button type="button" class="btn btn-info custom-spacing">CONTACT</button></a>
+          <a href="signup.html"> <button type="button" class="btn btn-info custom-spacing">SIGNUP</button></a>
+          <a href="login.html"> <button type="button" class="btn btn-info custom-spacing">LOGIN</button></a>          
+        </div>
+        <br>
+      </header>    
+      <body>
+        <main>
+            <section class="contact-info" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: larger;">
+                <h2><b>Get in Touch</b></h2>
+                <p>We'd love to hear from you! Whether you have questions, need advice.</p>
+                <address>
+                    <p><strong>Contact Information:</strong></p>
+                    <p><strong>Phone:</strong>9390162771</p>
+                    <p><strong>Email:</strong> kareemasyed9@gmail.com</p>
+                    <p><strong>Address:</strong> Kerala</p>
+                </address>
+            </section>
+            <section class="contact-form">
+                <h2><b>Send Us a Message</b></h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+    
+                    <label for="contactMethod">Preferred Contact Method:</label>
+                    <select id="contactMethod" name="contactMethod">
+                        <option value="phone">Phone</option>
+                        <option value="email">Email</option>
+                        <input type="submit">
+                    </select>             
+                </form>
+            </section>        
+        </main>
+        <footer>
+            <center>
+            <p style="background-color: rgb(237, 222, 222);color: rgb(16, 13, 16);font-size:large;
+           font-family: 'Times New Roman', Times, serif;padding: 10px;">&copy; SDK AIRLINES. All rights reserved.</p>
+           </center>
+        </footer>
+        <script src="scripts.js"></script>
+        <script>document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+        
+            if (name && email && message) {
+                alert('Thank you for contacting us! We will get back to you soon.');
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Please fill out all required fields.');
+            }
+        });
+        </script>
+<style> 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+.contact-form label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+.contact-form input, .contact-form textarea, .contact-form select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>
+      </body>
+</html>
